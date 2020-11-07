@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Greeting from './components/Greeting/Greeting.jsx';
+import PlayerCard from './components/PlayerCard'
 
 function App() {
+  const name = "Riley"
   return (
     <div className="App">
       <header className="App-header">
@@ -9,13 +12,16 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Greeting name = {name}/>
+        <Greeting/>
+        <Greeting/>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React Hello World
         </a>
       </header>
     </div>
