@@ -19,7 +19,7 @@ function Login() {
                 </Col>
             </Row>
             <Row>
-                <Col>
+                <Col xs={5}>
                     <Form>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
