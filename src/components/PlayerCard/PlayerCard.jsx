@@ -4,32 +4,42 @@ import './PlayerCard.scss';
 
 const PlayerCard = (props) => {
     return (
-        <Card
-            bg="primary"
-            text="info"
-            style={{
-                width: '18rem'
-            }}
-        >
-            <Card.Body>
-                <Card.Title
-                    style={{ fontFamily: "'Saira Stencil One', sans-serif" }}
-                >{`${props.username}`}</Card.Title>
-                <Card.Text>{`${props.bio}`}</Card.Text>
-                <Card.Text className="card-attribute">
-                    <span>Game:</span>
-                    <span className="card-attribute-value">{props.game}</span>
-                </Card.Text>
-                <Card.Text className="card-attribute">
-                    <span>Rank:</span>
-                    <span className="card-attribute-value">{props.rank}</span>
-                </Card.Text>
-                <Card.Text className="card-attribute">
-                    <span>Role:</span>
-                    <span className="card-attribute-value">{props.role}</span>
-                </Card.Text>
-            </Card.Body>
-        </Card>
+        <article className="card-parent">
+            <Card
+                bg="primary"
+                text="info"
+                style={{
+                    width: '18rem'
+                }}
+            >
+                <Card.Body>
+                    <Card.Title
+                        style={{
+                            fontFamily: "'Saira Stencil One', sans-serif"
+                        }}
+                    >{`${props.username}`}</Card.Title>
+                    <Card.Text>{`${props.bio}`}</Card.Text>
+                    <Card.Text className="card-attribute">
+                        <span>Game:</span>
+                        <span className="card-attribute-value">
+                            {props.game}
+                        </span>
+                    </Card.Text>
+                    <Card.Text className="card-attribute">
+                        <span>Rank:</span>
+                        <span className="card-attribute-value">
+                            {props.rank}
+                        </span>
+                    </Card.Text>
+                    <Card.Text className="card-attribute">
+                        <span>Role:</span>
+                        <span className="card-attribute-value">
+                            {props.role}
+                        </span>
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+        </article>
     );
 };
 
