@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardDeck } from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
 import "./PlayerCard.scss";
 
 const PlayerCard = (props) => {
@@ -13,20 +13,21 @@ const PlayerCard = (props) => {
                 }}
             >
                 <Card.Img className="card-image" src={`${props.pic}`} />
-                <Card.ImgOverlay>
+                <Card.ImgOverlay style={{ padding: "0.3rem" }}>
                     <Card.Body>
                         <Card.Title
                             style={{
+                                fontSize: "1.8rem",
                                 fontFamily: "'Saira Stencil One', sans-serif"
                             }}
-                        >{`${props.username}`}</Card.Title>
+                        >
+                            {`${props.username}`}{" "}
+                            <Image
+                                className="game-logo"
+                                src={`${props.gamelogo}`}
+                            />{" "}
+                        </Card.Title>
                         <Card.Text>{`${props.bio}`}</Card.Text>
-                        <Card.Text className="card-attribute">
-                            <span>Game:</span>
-                            <span className="card-attribute-value">
-                                {props.game}
-                            </span>
-                        </Card.Text>
                         <Card.Text className="card-attribute">
                             <span>Rank:</span>
                             <span className="card-attribute-value">
@@ -39,6 +40,10 @@ const PlayerCard = (props) => {
                                 {props.role}
                             </span>
                         </Card.Text>
+                        <Image
+                            className="rank-medal"
+                            src={`${props.rankmedal}`}
+                        />{" "}
                     </Card.Body>
                 </Card.ImgOverlay>
             </Card>

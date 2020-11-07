@@ -12,12 +12,13 @@ const CardGallery = () => {
                 return (
                     <PlayerCard
                         key={i}
+                        gamelogo={player.gamelogo}
                         pic={player.pic}
                         username={player.username}
                         bio={player.bio}
-                        game={player.game}
                         rank={player.rank}
                         role={player.role}
+                        rankmedal={player.rankmedal}
                     />
                 );
             })}
