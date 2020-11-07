@@ -1,10 +1,18 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 import AdditionalLoginOptions from "./AdditionalLoginOptions";
 import FormDivider from "../FormDivider";
 
 function Login() {
+    const history = useHistory();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        history.push("/");
+    };
+
     return (
         <Container fluid>
             <Row>
@@ -23,7 +31,7 @@ function Login() {
             </Row>
             <Row>
                 <Col xs={4} style={{ margin: "0 auto" }}>
-                    <Form>
+                    <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="formLoginEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
