@@ -16,6 +16,7 @@ const PlayerCard = (props) => {
                     boxShadow: "none"
                 }}
                 onClick={handleShow}
+                className="card-selector"
             >
                 <EdgedCard>
                     <Card.Img className="card-image" src={`${props.pic}`} />
