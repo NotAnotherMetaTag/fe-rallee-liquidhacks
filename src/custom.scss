@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;300;400;500;600;700;800&family=Saira+Stencil+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;300;400;500;600;700;800&family=Saira+Stencil+One&display=swap");
 
-@import "./scss/colors"; 
+@import "./scss/colors";
 @import "./scss/typography";
 @import "./scss/layout";
 
 // Override default variables before the import
 $theme-colors: (
-    'primary': $yale-blue,
-    'secondary': $byzantine,
-    'info': $baby-powder
+    "primary": $yale-blue,
+    "secondary": $byzantine,
+    "info": $baby-powder,
+    "warning": $oxford-blue
 );
 
 // Body
@@ -16,4 +17,4 @@ $body-bg: $oxford-blue;
 $body-color: $baby-powder;
 
 // Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";

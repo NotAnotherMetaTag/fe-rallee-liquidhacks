@@ -35,8 +35,24 @@ $corner-cut: 30px;
     padding-right: 3rem;
 }
 
+.button-font {
+    font-size: 3rem;
+    font-family: "Saira Stencil One", sans-serif;
+}
+
+.close {
+    color: $baby-powder !important;
+}
+
 .modal {
     filter: drop-shadow(0.5rem 0.5rem 0.5rem $oxford-blue);
+}
+
+.modal-body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .modal-backdrop {

@@ -51,29 +51,37 @@ const PlayerCard = (props) => {
                 <Card.Img className="modal-image" src={`${props.pic}`} />
                 <Card.ImgOverlay style={{ padding: "0.3rem" }}>
                     <Modal.Body>
-                        <button
-                            type="button"
-                            class="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <div
-                            style={{
-                                fontSize: "3rem",
-                                fontFamily: "'Saira Stencil One', sans-serif",
-                                textAlign: "left"
-                            }}
-                        >
-                            {`${props.username}`}{" "}
+                        <div>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                                onClick={handleClose}
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div
+                                style={{
+                                    fontSize: "3rem",
+                                    fontFamily:
+                                        "'Saira Stencil One', sans-serif",
+                                    textAlign: "left"
+                                }}
+                            >
+                                {`${props.username}`}{" "}
+                            </div>
+                            <div>{`${props.bio}`}</div>
                         </div>
                         <div>
-                            <Button variant="primary" onClick={handleClose}>
-                                Close
-                            </Button>
-                            <Button variant="secondary" onClick={handleClose}>
-                                Message
+                            <Button
+                                className="button-font"
+                                variant="warning"
+                                size="lg"
+                                block
+                                onClick={handleClose}
+                            >
+                                Message Player
                             </Button>
                         </div>
                     </Modal.Body>
