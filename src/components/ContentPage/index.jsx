@@ -1,3 +1,3 @@
-import ContentPage from './ContentPage';
+import ContentPage from "./ContentPage";
 
 export default ContentPage;
