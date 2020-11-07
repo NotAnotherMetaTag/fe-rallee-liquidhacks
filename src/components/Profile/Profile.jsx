@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import ContentPage from '../ContentPage';
+import ContentPage from "../ContentPage";
 
 function Profile() {
     return (
