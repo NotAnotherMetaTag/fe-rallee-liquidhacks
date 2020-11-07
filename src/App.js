@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import Greeting from './components/Greeting/Greeting.jsx';
 import PlayerCard from './components/PlayerCard';
 
@@ -13,6 +12,7 @@ function App() {
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
+                <PlayerCard />
                 <Greeting name={name} />
                 <Greeting />
                 <Greeting />
