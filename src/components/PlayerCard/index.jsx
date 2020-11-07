@@ -1,2 +1,2 @@
-import PlayerCard from './PlayerCard.jsx';
+import PlayerCard from "./PlayerCard.jsx";
 export default PlayerCard;

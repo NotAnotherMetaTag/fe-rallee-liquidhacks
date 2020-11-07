@@ -1,6 +1,6 @@
-import React from 'react';
-import PlayerCard from '../PlayerCard';
-import MockPlayers from './mockplayers.json';
+import React from "react";
+import PlayerCard from "../PlayerCard";
+import MockPlayers from "./mockplayers.json";
 
 const CardGallery = () => {
     return MockPlayers.map((player, i) => {

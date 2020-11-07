@@ -1,3 +1,3 @@
-import DevNav from './DevNav.jsx';
+import DevNav from "./DevNav.jsx";
 
 export default DevNav;

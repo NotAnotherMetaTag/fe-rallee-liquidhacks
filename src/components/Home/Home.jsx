@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import ContentPage from '../ContentPage';
-import CardGallery from '../CardGallery';
+import ContentPage from "../ContentPage";
+import CardGallery from "../CardGallery";
 
 function Home() {
     return (

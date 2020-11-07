@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from "../Header";
+import Footer from "../Footer";
 
 function ContentPage(props) {
     return (
         <div
             style={{
-                display: 'flex',
-                flexFlow: 'column nowrap',
-                justifyContent: 'space-between',
-                minHeight: '100vh'
+                display: "flex",
+                flexFlow: "column nowrap",
+                justifyContent: "space-between",
+                minHeight: "100vh"
             }}
         >
             <Header />

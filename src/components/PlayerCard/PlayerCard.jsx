@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
-import './PlayerCard.scss';
+import React from "react";
+import { Card, Button } from "react-bootstrap";
+import "./PlayerCard.scss";
 
 const PlayerCard = (props) => {
     return (
@@ -9,7 +9,7 @@ const PlayerCard = (props) => {
                 bg="primary"
                 text="info"
                 style={{
-                    width: '18rem'
+                    width: "18rem"
                 }}
             >
                 <Card.Body>
