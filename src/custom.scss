@@ -1,4 +1,7 @@
-@import "./colors"; 
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;300;400;500;600;700;800&family=Saira+Stencil+One&display=swap');
+
+@import "./scss/colors"; 
+@import "./scss//typography";
 
 // Override default variables before the import
 $theme-colors: (
@@ -6,6 +9,8 @@ $theme-colors: (
     'secondary': $byzantine,
     'info': $baby-powder
 );
+
+// Body
 $body-bg: $oxford-blue;
 $body-color: $baby-powder;
 

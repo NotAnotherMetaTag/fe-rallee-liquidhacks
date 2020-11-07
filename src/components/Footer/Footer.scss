@@ -1,9 +1,9 @@
-@import "../../colors";
+@import "../../custom.scss";
 
 footer {
     background-color: $rich-black;
     color: $baby-powder;
-    display: flex;
+    display: flex !important;
     flex-flow: row wrap;
     justify-content: center;
     padding: 0.5rem;
