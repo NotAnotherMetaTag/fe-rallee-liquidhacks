@@ -1,38 +1,26 @@
-import logo from './logo.svg';
-import Greeting from './components/Greeting/Greeting.jsx';
-import PlayerCard from './components/PlayerCard';
+import React from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
+
+import routes from './routes';
+
+import DevNav from './components/DevNav';
 
 function App() {
-    const username = 'Riley';
-    const bio = 'Riley really likes coldstone cake batter ice cream.';
-    const game = 'League of Legends';
-    const rank = 'Gold';
-    const role = 'ADC';
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1>Example Header</h1>
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <PlayerCard
-                    username={username}
-                    bio={bio}
-                    game={game}
-                    rank={rank}
-                    role={role}
-                />
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React Hello World
-                </a>
-            </header>
-        </div>
+        <>
+            {/* Developer Tool */}
+            <DevNav />
+
+            <Switch>
+                {/* Redirect anything that is more than a single url param */}
+                {routes.map((route, i) => {
+                    return <Route key={i} {...route} />;
+                })}
+                <Route path="*">
+                    <Redirect to="/" />
+                </Route>
+            </Switch>
+        </>
     );
 }
 

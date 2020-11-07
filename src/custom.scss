@@ -6,6 +6,8 @@ $theme-colors: (
     'secondary': #c800a8,
     'info': #fffffb
 );
+$body-bg: #0c233f;
+$body-color: #fffffb;
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
