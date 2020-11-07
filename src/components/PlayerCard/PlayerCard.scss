@@ -1,0 +1,25 @@
+$corner-cut: 30px;
+
+.card {
+    clip-path: polygon(
+        0px 0,
+        calc(100% - #{$corner-cut}) 0,
+        100% #{$corner-cut},
+        100% 100%,
+        #{$corner-cut} 100%,
+        0 calc(100% - #{$corner-cut}),
+        #{$corner-cut} 100%,
+        0 calc(100% - #{$corner-cut}),
+        0 #{$corner-cut}
+    );
+}
+
+.card-attribute {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.card-attribute-value {
+    padding-right: 3rem;
+}

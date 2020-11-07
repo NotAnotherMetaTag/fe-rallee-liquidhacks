@@ -1,16 +1,33 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import './PlayerCard.scss';
 
-const PlayerCard = () => {
+const PlayerCard = (props) => {
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card
+            bg="primary"
+            text="info"
+            style={{
+                width: '18rem'
+            }}
+        >
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                <Card.Title
+                    style={{ fontFamily: "'Saira Stencil One', sans-serif" }}
+                >{`${props.username}`}</Card.Title>
+                <Card.Text>{`${props.bio}`}</Card.Text>
+                <Card.Text className="card-attribute">
+                    <span>Game:</span>
+                    <span className="card-attribute-value">{props.game}</span>
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Card.Text className="card-attribute">
+                    <span>Rank:</span>
+                    <span className="card-attribute-value">{props.rank}</span>
+                </Card.Text>
+                <Card.Text className="card-attribute">
+                    <span>Role:</span>
+                    <span className="card-attribute-value">{props.role}</span>
+                </Card.Text>
             </Card.Body>
         </Card>
     );
