@@ -1,0 +1,22 @@
+@import "../../custom.scss";
+
+.home-content {
+    flex-direction: row;
+    @media only screen and (max-width: $tablet-width) {
+        flex-direction: column;
+    }
+}
+
+.home-cards-wrapper {
+    order: 1;
+    @media only screen and (max-width: $tablet-width) {
+        order: 2;
+    }
+}
+
+.home-controls-wrapper {
+    order: 2;
+    @media only screen and (max-width: $tablet-width) {
+        order: 1;
+    }
+}
