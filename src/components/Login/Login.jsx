@@ -10,7 +10,17 @@ import FormDivider from "../FormDivider";
 function Login() {
     const history = useHistory();
 
-    const schema = yup.object({
+    const initialValues = {
+        email: "",
+        password: ""
+    };
+
+    const onSubmit = () => {
+        // TODO: Connect to backend
+        history.push("/");
+    };
+
+    const validationSchema = yup.object({
         email: yup.string().email("Invalid email").required("Required"),
         password: yup
             .string()
@@ -39,14 +49,13 @@ function Login() {
             </Row>
             <Row>
                 <Col xs={4} style={{ margin: "0 auto" }}>
-                    <Formik validationSchema={schema}>
+                    <Formik {...{ initialValues, validationSchema, onSubmit }}>
                         {({
                             handleSubmit,
                             handleChange,
-                            handleBlur,
+                            getFieldProps,
                             values,
                             touched,
-                            isValid,
                             errors
                         }) => (
                             <Form noValidate onSubmit={handleSubmit}>
@@ -55,7 +64,12 @@ function Login() {
                                     <Form.Control
                                         type="email"
                                         placeholder="progamer@legallyskilled.com"
+                                        {...getFieldProps("email")}
+                                        isInvalid={!!errors.email}
                                     />
+                                    <Form.Control.Feedback type="invalid">
+                                        {errors.email}
+                                    </Form.Control.Feedback>
                                     <Form.Text className="text-muted">
                                         We'll never share your email with anyone
                                         else.
@@ -66,8 +80,13 @@ function Login() {
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
                                         type="password"
-                                        placeholder="Password"
+                                        placeholder="hunter2"
+                                        {...getFieldProps("password")}
+                                        isInvalid={!!errors.password}
                                     />
+                                    <Form.Control.Feedback type="invalid">
+                                        {errors.password}
+                                    </Form.Control.Feedback>
                                 </Form.Group>
                                 <Button
                                     variant="primary"
