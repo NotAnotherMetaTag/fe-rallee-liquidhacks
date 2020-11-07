@@ -11,7 +11,7 @@ function Header() {
                 <img
                     src={process.env.PUBLIC_URL + "/Logo/White_Rainbow.svg"}
                     alt="Rallee Logo"
-                    width="150px"
+                    width="175px"
                 />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

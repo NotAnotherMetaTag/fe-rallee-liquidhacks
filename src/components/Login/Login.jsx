@@ -23,13 +23,16 @@ function Login() {
     };
 
     const validationSchema = yup.object({
-        email: yup.string().email("Invalid email").required("Required"),
+        email: yup
+            .string()
+            .email("Invalid email")
+            .required("Please enter your email"),
         password: yup
             .string()
-            .required("Please Enter your password")
+            .required("Please enter your password")
             .matches(
-                /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-                "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
+                /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+                "Your password must 8 characters long and contain at least one letter and one number"
             )
     });
 

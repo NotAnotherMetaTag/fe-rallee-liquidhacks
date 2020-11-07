@@ -2,4 +2,9 @@
 
 .header-nav {
     font-family: $header-font;
+    align-items: flex-end !important;
+}
+
+.nav-link {
+    font-size: 1.5rem;
 }
