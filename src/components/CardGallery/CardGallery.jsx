@@ -1,21 +1,20 @@
 import React from 'react';
 import PlayerCard from '../PlayerCard';
+import MockPlayers from './mockplayers.json';
 
 const CardGallery = () => {
-    const username = 'Riley';
-    const bio = 'Riley really likes coldstone cake batter ice cream.';
-    const game = 'League of Legends';
-    const rank = 'Gold';
-    const role = 'ADC';
-    return (
-        <PlayerCard
-            username={username}
-            bio={bio}
-            game={game}
-            rank={rank}
-            role={role}
-        />
-    );
+    return MockPlayers.map((player, i) => {
+        return (
+            <PlayerCard
+                key={i}
+                username={player.username}
+                bio={player.bio}
+                game={player.game}
+                rank={player.rank}
+                role={player.role}
+            />
+        );
+    });
 };
 
 export default CardGallery;
