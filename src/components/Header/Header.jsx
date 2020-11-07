@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import "./Header.scss";
 
@@ -8,7 +8,11 @@ function Header() {
     return (
         <Navbar className="header-nav" variant="dark" expand="lg">
             <Navbar.Brand as={NavLink} to="/">
-                Rallee
+                <img
+                    src={process.env.PUBLIC_URL + "/Logo/White_Rainbow.svg"}
+                    alt="Rallee Logo"
+                    width="150px"
+                />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
