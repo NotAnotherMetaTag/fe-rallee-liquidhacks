@@ -27,23 +27,14 @@ const PlayerCard = (props) => {
                                 src={`${props.gamelogo}`}
                             />{" "}
                         </Card.Title>
-                        <Card.Text>{`${props.bio}`}</Card.Text>
-                        <Card.Text className="card-attribute">
-                            <span>Rank:</span>
-                            <span className="card-attribute-value">
-                                {props.rank}
-                            </span>
-                        </Card.Text>
-                        <Card.Text className="card-attribute">
-                            <span>Role:</span>
-                            <span className="card-attribute-value">
-                                {props.role}
-                            </span>
-                        </Card.Text>
-                        <Image
-                            className="rank-medal"
-                            src={`${props.rankmedal}`}
-                        />{" "}
+                        <Card.Text className="bio">{`${props.bio}`}</Card.Text>
+                        <div>
+                            {`${props.role}`}
+                            <Image
+                                className="rank-medal"
+                                src={`${props.rankmedal}`}
+                            />{" "}
+                        </div>
                     </Card.Body>
                 </Card.ImgOverlay>
             </Card>

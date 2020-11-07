@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;300;400;500;600;700;800&family=Saira+Stencil+One&display=swap');
 
 @import "./scss/colors"; 
-@import "./scss//typography";
+@import "./scss/typography";
+@import "./scss/layout";
 
 // Override default variables before the import
 $theme-colors: (
