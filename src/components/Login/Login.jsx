@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
+import AdditionalLoginOptions from "./AdditionalLoginOptions";
+import FormDivider from "../FormDivider";
+
 function Login() {
     return (
         <Container fluid>
@@ -11,7 +14,7 @@ function Login() {
                         alt="Rallee Logo"
                         style={{
                             display: "block",
-                            margin: "0 auto",
+                            margin: "1rem auto",
                             maxWidth: "650px",
                             width: "100%"
                         }}
@@ -19,9 +22,9 @@ function Login() {
                 </Col>
             </Row>
             <Row>
-                <Col xs={5}>
+                <Col xs={4} style={{ margin: "0 auto" }}>
                     <Form>
-                        <Form.Group controlId="formBasicEmail">
+                        <Form.Group controlId="formLoginEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
                                 type="email"
@@ -32,20 +35,25 @@ function Login() {
                             </Form.Text>
                         </Form.Group>
 
-                        <Form.Group controlId="formBasicPassword">
+                        <Form.Group controlId="formLoginPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control
                                 type="password"
                                 placeholder="Password"
                             />
                         </Form.Group>
-                        <Form.Group controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Check me out" />
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                            Submit
+                        <Button
+                            variant="primary"
+                            type="submit"
+                            style={{ display: "block", margin: "0 auto" }}
+                        >
+                            Login
                         </Button>
                     </Form>
+
+                    <FormDivider />
+
+                    <AdditionalLoginOptions />
                 </Col>
             </Row>
         </Container>
