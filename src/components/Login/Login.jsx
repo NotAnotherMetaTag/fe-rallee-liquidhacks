@@ -7,6 +7,8 @@ import * as yup from "yup";
 import AdditionalLoginOptions from "./AdditionalLoginOptions";
 import FormDivider from "../FormDivider";
 
+import blueTransparent from "../../assets/blue_transparent.png";
+
 function Login() {
     const history = useHistory();
 
@@ -24,10 +26,10 @@ function Login() {
         email: yup.string().email("Invalid email").required("Required"),
         password: yup
             .string()
-            .min(8, "Password must be at least 8 characters")
+            .required("Please Enter your password")
             .matches(
-                "^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$",
-                "Password can must contain at least 1 letter and 1 number"
+                /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+                "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
             )
     });
 
@@ -63,7 +65,7 @@ function Login() {
                                     <Form.Label>Email address</Form.Label>
                                     <Form.Control
                                         type="email"
-                                        placeholder="progamer@legallyskilled.com"
+                                        placeholder="blue@teamliquid.com"
                                         {...getFieldProps("email")}
                                         isInvalid={!!errors.email}
                                     />
@@ -107,6 +109,19 @@ function Login() {
                     <AdditionalLoginOptions />
                 </Col>
             </Row>
+
+            <img
+                src={blueTransparent}
+                alt=""
+                style={{
+                    position: "fixed",
+                    right: "0",
+                    zIndex: "-1",
+                    width: "25%",
+                    bottom: "0",
+                    margin: "1rem"
+                }}
+            />
         </Container>
     );
 }
