@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 function Greeting() {
-  const test = "riley";
-  return <div>LiquidHacks!~</div>;
+    const test = 'riley';
+    return <div>LiquidHacks!~</div>;
 }
 
 export default Greeting;
