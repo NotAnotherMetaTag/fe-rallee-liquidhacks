@@ -22,27 +22,58 @@ const PlayerCard = (props) => {
                     <Card.Img className="card-image" src={`${props.pic}`} />
                     <Card.ImgOverlay>
                         <Card.Body>
-                            <Card.Title
+                            <div>
+                                <Card.Title
+                                    style={{
+                                        fontSize: "1.8rem",
+                                        fontFamily:
+                                            "'Saira Stencil One', sans-serif",
+                                        textAlign: "left"
+                                    }}
+                                >
+                                    {`${props.username}`}{" "}
+                                    <Image
+                                        className="game-logo"
+                                        src={`${props.gamelogo}`}
+                                    />{" "}
+                                </Card.Title>
+                                <Card.Text className="bio">{`${props.bio}`}</Card.Text>
+                            </div>
+                            <div
                                 style={{
-                                    fontSize: "1.8rem",
-                                    fontFamily:
-                                        "'Saira Stencil One', sans-serif",
-                                    textAlign: "left"
+                                    display: "flex",
+                                    flexFlow: "row nowrap",
+                                    justifyContent: "space-between"
                                 }}
                             >
-                                {`${props.username}`}{" "}
-                                <Image
-                                    className="game-logo"
-                                    src={`${props.gamelogo}`}
-                                />{" "}
-                            </Card.Title>
-                            <Card.Text className="bio">{`${props.bio}`}</Card.Text>
-                            <div>
-                                {`${props.role}`}
-                                <Image
-                                    className="rank-medal"
-                                    src={`${props.rankmedal}`}
-                                />{" "}
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        flexFlow: "column nowrap",
+                                        justifyContent: "flex-end",
+                                        alignItems: "flex-start",
+                                        fontSize: "0.9rem"
+                                    }}
+                                >
+                                    {props.roles &&
+                                        props.roles.map((role, i) => {
+                                            return <div key={i}>{role}</div>;
+                                        })}
+                                </div>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        flexFlow: "column nowrap",
+                                        justifyContent: "flex-end"
+                                    }}
+                                >
+                                    {`${props.rank}`}
+                                    <Image
+                                        className="rank-medal"
+                                        src={`${props.rankmedal}`}
+                                        width="75px"
+                                    />{" "}
+                                </div>
                             </div>
                         </Card.Body>
                     </Card.ImgOverlay>
