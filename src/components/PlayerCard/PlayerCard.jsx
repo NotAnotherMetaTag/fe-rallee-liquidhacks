@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Image, Button, Modal, Carousel } from "react-bootstrap";
+import { Card, Image, Button, Modal } from "react-bootstrap";
 import "./PlayerCard.scss";
 import EdgedCard from "../EdgedCard";
 

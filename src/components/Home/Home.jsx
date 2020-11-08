@@ -5,6 +5,7 @@ import "./Home.scss";
 
 import ContentPage from "../ContentPage";
 import CardGallery from "../CardGallery";
+import FilterBar from "../FilterBar";
 
 function Home() {
     return (
@@ -14,14 +15,8 @@ function Home() {
                     <Col className="home-cards-wrapper">
                         <CardGallery />
                     </Col>
-                    <Col
-                        className="home-controls-wrapper"
-                        md="2"
-                        style={{
-                            border: "2px solid red"
-                        }}
-                    >
-                        <div>FilterBar</div>
+                    <Col className="home-controls-wrapper" md="3">
+                        <FilterBar />
                     </Col>
                 </Row>
             </Container>
