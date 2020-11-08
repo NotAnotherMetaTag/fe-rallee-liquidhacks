@@ -15,7 +15,7 @@ function Home() {
                     <Col className="home-cards-wrapper">
                         <CardGallery />
                     </Col>
-                    <Col className="home-controls-wrapper" md="3">
+                    <Col className="home-controls-wrapper" xl="3">
                         <FilterBar />
                     </Col>
                 </Row>

@@ -4,7 +4,7 @@ import TimeZones from "./TimeZones.json";
 
 const FilterBar = () => {
     return (
-        <aside className="bar" style={{ width: "100%" }}>
+        <aside className="bar">
             <div className="header">Search Filters</div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Game</label>
