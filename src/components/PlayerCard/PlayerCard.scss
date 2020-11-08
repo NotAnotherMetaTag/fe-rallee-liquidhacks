@@ -12,6 +12,13 @@ $corner-cut: 30px;
     height: 300px;
 }
 
+.card-body {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
 .game-logo {
     height: 2.5rem;
     float: right;
