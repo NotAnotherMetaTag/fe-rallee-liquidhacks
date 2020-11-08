@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Image, Button, Modal, Carousel } from "react-bootstrap";
+import { Card, Image, Button, Modal } from "react-bootstrap";
 import "./PlayerCard.scss";
 import EdgedCard from "../EdgedCard";
 
@@ -15,9 +15,10 @@ const PlayerCard = (props) => {
                     outline: "none",
                     boxShadow: "none"
                 }}
+                className="card-selector"
                 onClick={handleShow}
             >
-                <EdgedCard>
+                <EdgedCard width="18rem" growOnHover="true">
                     <Card.Img className="card-image" src={`${props.pic}`} />
                     <Card.ImgOverlay style={{ padding: "0.3rem" }}>
                         <Card.Body>
@@ -53,7 +54,7 @@ const PlayerCard = (props) => {
                     <Modal.Body>
                         <button
                             type="button"
-                            class="close"
+                            className="close"
                             data-dismiss="modal"
                             aria-label="Close"
                         >
