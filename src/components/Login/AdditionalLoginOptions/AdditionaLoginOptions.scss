@@ -1,0 +1,11 @@
+.login-options-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center
+}
+
+.login-options-link {
+    &:hover, &:focus {
+        color: inherit;
+    }
+}

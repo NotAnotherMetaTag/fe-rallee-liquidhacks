@@ -1,0 +1,30 @@
+@import "../../custom.scss";
+
+$corner-cut: 30px;
+
+.card-parent {
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem $rich-black);
+    padding: 1.3rem;
+}
+
+.card-grow {
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+    transition: transform 0.075s ease-in 0s;
+}
+
+.card {
+    clip-path: polygon(
+        0px 0,
+        calc(100% - #{$corner-cut}) 0,
+        100% #{$corner-cut},
+        100% 100%,
+        #{$corner-cut} 100%,
+        0 calc(100% - #{$corner-cut}),
+        #{$corner-cut} 100%,
+        0 calc(100% - #{$corner-cut}),
+        0 #{$corner-cut}
+    );
+}

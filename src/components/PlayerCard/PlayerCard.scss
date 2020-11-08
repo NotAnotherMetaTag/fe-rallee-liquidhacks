@@ -1,7 +1,8 @@
+@import "../../custom.scss";
+
 $corner-cut: 30px;
-.card-parent {
-    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
-    padding: 1.3rem;
+
+.card-selector {
     &:hover,
     &:focus {
         transform: scale(1.1);
@@ -25,7 +26,54 @@ $corner-cut: 30px;
     float: right;
 }
 
-.card {
+.bio {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+}
+
+.card-attribute {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.card-attribute-value {
+    padding-right: 3rem;
+}
+
+.button-font {
+    font-size: 3rem;
+    font-family: "Saira Stencil One", sans-serif;
+}
+
+.close {
+    color: $baby-powder !important;
+}
+
+.modal {
+    filter: drop-shadow(0.5rem 0.5rem 0.5rem $oxford-blue);
+}
+
+.modal-body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.modal-backdrop {
+    background: linear-gradient(
+        135deg,
+        $aqua,
+        $violet-color-wheel,
+        $byzantine
+    ) !important;
+}
+
+.modal-content {
     clip-path: polygon(
         0px 0,
         calc(100% - #{$corner-cut}) 0,
@@ -37,21 +85,11 @@ $corner-cut: 30px;
         0 calc(100% - #{$corner-cut}),
         0 #{$corner-cut}
     );
+    background-color: $yale-blue !important;
 }
 
-.bio {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.card-attribute {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-.card-attribute-value {
-    padding-right: 3rem;
+.modal-image {
+    object-fit: cover;
+    filter: blur(0.4rem) opacity(40%);
+    height: 600px;
 }
