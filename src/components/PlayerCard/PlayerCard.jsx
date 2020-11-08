@@ -70,11 +70,14 @@ const PlayerCard = (props) => {
                             {`${props.username}`}{" "}
                         </div>
                         <div>
-                            <Button variant="primary" onClick={handleClose}>
-                                Close
-                            </Button>
-                            <Button variant="secondary" onClick={handleClose}>
-                                Message
+                            <Button
+                                className="button-font"
+                                variant="warning"
+                                size="lg"
+                                block
+                                onClick={handleClose}
+                            >
+                                Message Player
                             </Button>
                         </div>
                     </Modal.Body>
