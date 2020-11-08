@@ -1,5 +1,14 @@
 @import "../../custom.scss";
+
 $corner-cut: 30px;
+
+.card-selector {
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+    transition: transform 0.075s ease-in 0s;
+}
 
 .card-image {
     object-fit: cover;
