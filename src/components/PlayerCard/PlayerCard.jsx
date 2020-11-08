@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Image, Button, Modal, Carousel } from "react-bootstrap";
+import { Card, Image, Button, Modal } from "react-bootstrap";
 import "./PlayerCard.scss";
 import EdgedCard from "../EdgedCard";
 
@@ -15,10 +15,10 @@ const PlayerCard = (props) => {
                     outline: "none",
                     boxShadow: "none"
                 }}
-                onClick={handleShow}
                 className="card-selector"
+                onClick={handleShow}
             >
-                <EdgedCard>
+                <EdgedCard width="18rem" growOnHover="true">
                     <Card.Img className="card-image" src={`${props.pic}`} />
                     <Card.ImgOverlay style={{ padding: "0.3rem" }}>
                         <Card.Body>
@@ -52,27 +52,22 @@ const PlayerCard = (props) => {
                 <Card.Img className="modal-image" src={`${props.pic}`} />
                 <Card.ImgOverlay style={{ padding: "0.3rem" }}>
                     <Modal.Body>
-                        <div>
-                            <button
-                                type="button"
-                                class="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                                onClick={handleClose}
-                            >
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <div
-                                style={{
-                                    fontSize: "3rem",
-                                    fontFamily:
-                                        "'Saira Stencil One', sans-serif",
-                                    textAlign: "left"
-                                }}
-                            >
-                                {`${props.username}`}{" "}
-                            </div>
-                            <div>{`${props.bio}`}</div>
+                        <button
+                            type="button"
+                            className="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div
+                            style={{
+                                fontSize: "3rem",
+                                fontFamily: "'Saira Stencil One', sans-serif",
+                                textAlign: "left"
+                            }}
+                        >
+                            {`${props.username}`}{" "}
                         </div>
                         <div>
                             <Button

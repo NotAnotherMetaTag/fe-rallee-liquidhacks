@@ -7,6 +7,14 @@ $corner-cut: 30px;
     padding: 1.3rem;
 }
 
+.card-grow {
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+    transition: transform 0.075s ease-in 0s;
+}
+
 .card {
     clip-path: polygon(
         0px 0,
