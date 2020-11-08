@@ -52,22 +52,32 @@ const PlayerCard = (props) => {
                 <Card.Img className="modal-image" src={`${props.pic}`} />
                 <Card.ImgOverlay style={{ padding: "0.3rem" }}>
                     <Modal.Body>
-                        <button
-                            type="button"
-                            className="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <div
-                            style={{
-                                fontSize: "3rem",
-                                fontFamily: "'Saira Stencil One', sans-serif",
-                                textAlign: "left"
-                            }}
-                        >
-                            {`${props.username}`}{" "}
+                        <div>
+                            <button
+                                type="button"
+                                className="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div
+                                style={{
+                                    fontSize: "3rem",
+                                    fontFamily:
+                                        "'Saira Stencil One', sans-serif",
+                                    textAlign: "left"
+                                }}
+                            >
+                                {`${props.username}`}{" "}
+                            </div>
+                            <div
+                                style={{
+                                    fontWeight: "bold",
+                                    fontSize: "1.2rem"
+                                }}
+                            >{`${props.name}`}</div>
+                            <div>{`${props.bio}`}</div>
                         </div>
                         <div>
                             <Button

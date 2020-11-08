@@ -15,6 +15,7 @@ const CardGallery = () => {
                         gamelogo={player.gamelogo}
                         pic={player.pic}
                         username={player.username}
+                        name={player.name}
                         bio={player.bio}
                         role={player.role}
                         rankmedal={player.rankmedal}
