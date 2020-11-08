@@ -55,14 +55,7 @@ function Login() {
             <Row>
                 <Col xs={4} style={{ margin: "0 auto" }}>
                     <Formik {...{ initialValues, validationSchema, onSubmit }}>
-                        {({
-                            handleSubmit,
-                            handleChange,
-                            getFieldProps,
-                            values,
-                            touched,
-                            errors
-                        }) => (
+                        {({ handleSubmit, getFieldProps, errors }) => (
                             <Form noValidate onSubmit={handleSubmit}>
                                 <Form.Group controlId="formLoginEmail">
                                     <Form.Label>Email address</Form.Label>

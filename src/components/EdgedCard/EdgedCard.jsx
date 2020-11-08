@@ -11,7 +11,8 @@ const EdgedCard = (props) => {
                 bg="primary"
                 text="info"
                 style={{
-                    width: `${props.width}`
+                    width: `${props.width}`,
+                    margin: "0 auto"
                 }}
             >
                 {props.children}
