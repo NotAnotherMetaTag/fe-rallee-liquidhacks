@@ -1,4 +1,10 @@
+@import "../../custom.scss";
+
 .card-gallery {
     display: flex;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: $tablet-width) {
+        justify-content: center;
+    }
 }

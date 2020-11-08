@@ -1,9 +1,29 @@
 @import "../../custom.scss";
 
+$filter-corner: 20px;
+
 .bar {
     margin-top: 1.75rem;
     background-color: $yale-blue;
     padding: 0.5rem 1rem;
+    position: fixed;
+    margin-right: 2rem;
+
+    clip-path: polygon(
+        $filter-corner 0px,
+        100% 0px,
+        100% #{$filter-corner},
+        100% calc(100% - #{$filter-corner}),
+        calc(100% - #{$filter-corner}) 100%,
+        0 100%,
+        0 $filter-corner
+    );
+
+    @media only screen and (max-width: $tablet-width) {
+        position: relative;
+        margin-right: none;
+        width: 100%;
+    }
 }
 
 .header {

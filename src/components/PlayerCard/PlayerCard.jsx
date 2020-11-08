@@ -20,7 +20,7 @@ const PlayerCard = (props) => {
             >
                 <EdgedCard width="18rem" growOnHover="true">
                     <Card.Img className="card-image" src={`${props.pic}`} />
-                    <Card.ImgOverlay style={{ padding: "0.3rem" }}>
+                    <Card.ImgOverlay>
                         <Card.Body>
                             <Card.Title
                                 style={{
