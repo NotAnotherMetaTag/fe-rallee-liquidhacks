@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { Formik } from "formik";
 import * as yup from "yup";
 
@@ -87,7 +87,6 @@ function PersonalProfile() {
                         <Form.Label>Email Address</Form.Label>
                         <Form.Control
                             type="email"
-                            placeholder="blue@teamliquid.com"
                             {...getFieldProps("email")}
                             isInvalid={!!errors.email}
                         />
@@ -111,7 +110,7 @@ function PersonalProfile() {
                     </Form.Group>
 
                     <Button
-                        variant="primary"
+                        variant="secondary"
                         type="submit"
                         style={{
                             display: "block",
