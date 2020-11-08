@@ -3,6 +3,8 @@ import { Form, Button } from "react-bootstrap";
 import { Formik } from "formik";
 import * as yup from "yup";
 
+import "./PersonalProfile.scss";
+
 function PersonalProfile() {
     const initialValues = {
         username: "",
@@ -107,6 +109,29 @@ function PersonalProfile() {
                         <Form.Control.Feedback type="invalid">
                             {errors.bio}
                         </Form.Control.Feedback>
+                    </Form.Group>
+
+                    <Form.Group>
+                        <Form.Label>Languages</Form.Label>
+                        <div style={{ display: "flex", flexFlow: "row wrap" }}>
+                            {[
+                                "English",
+                                "Mandarin",
+                                "Hindi",
+                                "French",
+                                "Spanish",
+                                "Arabic"
+                            ].map((language) => (
+                                <div key={language} className="m-3">
+                                    <Form.Check
+                                        custom
+                                        type="checkbox"
+                                        id={`checkbox-${language}`}
+                                        label={language}
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </Form.Group>
 
                     <Button

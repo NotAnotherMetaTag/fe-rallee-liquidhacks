@@ -1,0 +1,6 @@
+@import "../../../../custom.scss";
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: $byzantine !important;
+    background-color: $byzantine !important;
+}
